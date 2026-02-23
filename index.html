@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alan Mark – Graphic Designer Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header>
+    <div class="container nav-container">
+        <h2 class="logo">Alan Mark</h2>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search work..." onkeyup="searchWorks()">
+        </div>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-text">
+        <h1>Creative Graphic Designer</h1>
+        <p>Transforming ideas into visual masterpieces <br> at affordable prices.</p>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>Hi! I’m Alan — a passionate graphic designer specializing in branding, posters, social media content, and visual storytelling. My goal is to help brands stand out and look professional, at affordable prices.</p>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="portfolio-section">
+    <h2>My Work</h2>
+    <div class="gallery" id="workGallery">
+        <div class="gallery-item" data-name="Brand Design">
+            <img src="images/work1.jpg" alt="Brand Design">
+            <p class="title">Brand Design</p>
+        </div>
+        <div class="gallery-item" data-name="Social Media Poster">
+            <img src="images/work2.jpg" alt="Social Media Poster">
+            <p class="title">Social Media Poster</p>
+        </div>
+        <div class="gallery-item" data-name="Logo Concept">
+            <img src="images/work3.jpg" alt="Logo Concept">
+            <p class="title">Logo Concept</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials-section">
+    <h2>What Clients Say</h2>
+    <div class="testimonials">
+        <div class="test-card">
+            <p>"Amazing designs! Delivered faster than expected."</p>
+            <span>— Jane Doe</span>
+        </div>
+        <div class="test-card">
+            <p>"Professional, creative, highly recommended!"</p>
+            <span>— John Smith</span>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-cards">
+
+        <div class="card">
+            <p>📧 Email</p>
+            <a href="mailto:okothmark435@gmail.com">okothmark435@gmail.com</a>
+        </div>
+
+        <div class="card">
+            <p>📞 Phone</p>
+            <a href="tel:+254798366614">0798 366 614</a>
+        </div>
+
+        <div class="card">
+            <p>💬 WhatsApp</p>
+            <a href="https://wa.me/254798366614" target="_blank">Chat Now</a>
+        </div>
+
+        <div class="card">
+            <p>🌐 Social</p>
+            <a href="https://www.instagram.com/markoz" target="_blank">Instagram: @markoz</a>
+        </div>
+
+        <div class="card">
+            <p>📍 Location</p>
+            <span>Nairobi, Kenya</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Alan Mark — Graphic Designer</p>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/254798366614" class="whatsapp-float" target="_blank">💬</a>
+
+<script>
+function searchWorks() {
+    let input = document.getElementById('searchInput').value.toLowerCase();
+    let items = document.querySelectorAll('.gallery-item');
+    items.forEach(item => {
+        let name = item.getAttribute('data-name').toLowerCase();
+        item.style.display = name.includes(input) ? 'block' : 'none';
+    });
+}
+</script>
+</body>
+</html>

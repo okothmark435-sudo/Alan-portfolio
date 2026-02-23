@@ -1,0 +1,47 @@
+/* ===== GLOBAL ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Segoe UI', sans-serif; background: linear-gradient(135deg,#141E30,#243B55); color:white; scroll-behavior:smooth; }
+
+/* ===== HEADER NAV ===== */
+header { position:sticky; top:0; background: rgba(255,255,255,0.08); backdrop-filter: blur(12px); padding:20px 5%; display:flex; justify-content:space-between; align-items:center; z-index:1000; }
+header h2.logo { font-size:26px; color:#00f2fe; }
+.nav-list { list-style:none; display:flex; gap:30px; }
+.nav-list a { text-decoration:none; color:white; font-weight:500; transition:.3s; }
+.nav-list a:hover { color:#00f2fe; }
+.search-box input { padding:8px 12px; border-radius:20px; border:none; outline:none; }
+
+/* ===== HERO ===== */
+.hero { height:90vh; display:flex; justify-content:center; align-items:center; text-align:center; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)); }
+.hero h1 { font-size:55px; background: linear-gradient(to right,#00f2fe,#4facfe); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+.hero p { font-size:20px; margin-top:15px; color:#ddd; }
+
+/* ===== SECTION HEADINGS ===== */
+section { padding:80px 10%; text-align:center; }
+section h2 { font-size:35px; margin-bottom:40px; position:relative; }
+section h2::after { content:""; width:80px; height:3px; background:#00f2fe; display:block; margin:10px auto; }
+
+/* ===== PORTFOLIO ===== */
+.gallery { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; }
+.gallery-item { width:300px; border-radius:15px; overflow:hidden; background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); transition:.4s; box-shadow:0 10px 30px rgba(0,0,0,0.3); cursor:pointer; }
+.gallery-item:hover { transform:translateY(-10px); }
+.gallery-item img { width:100%; height:220px; object-fit:cover; }
+.gallery-item .title { padding:15px; font-size:18px; font-weight:bold; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials { display:flex; gap:30px; justify-content:center; flex-wrap:wrap; }
+.test-card { width:280px; padding:25px; background: rgba(255,255,255,0.08); border-radius:15px; backdrop-filter: blur(10px); transition:.3s; }
+.test-card:hover { transform:scale(1.05); }
+
+/* ===== CONTACT CARDS ===== */
+.contact-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+.contact-cards .card { background: rgba(255,255,255,0.08); backdrop-filter: blur(10px); padding:25px; border-radius:15px; width:220px; text-align:center; transition:.3s ease; }
+.contact-cards .card:hover { transform:translateY(-10px); box-shadow:0 10px 25px rgba(0,0,0,0.3); }
+.contact-cards .card a { display:block; margin-top:8px; color:#00f2fe; text-decoration:none; font-weight:bold; }
+.contact-cards .card a:hover { text-decoration:underline; }
+
+/* ===== FLOATING WHATSAPP BUTTON ===== */
+.whatsapp-float { position:fixed; bottom:30px; right:30px; background:#25D366; color:white; padding:15px 18px; border-radius:50%; text-align:center; font-size:25px; box-shadow:0 5px 15px rgba(0,0,0,0.3); z-index:1000; transition:.3s ease; }
+.whatsapp-float:hover { transform:scale(1.1); box-shadow:0 8px 25px rgba(0,0,0,0.4); }
+
+/* ===== FOOTER ===== */
+footer { padding:20px; text-align:center; background: rgba(0,0,0,0.4); margin-top:40px; }
